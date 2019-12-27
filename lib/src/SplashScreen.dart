@@ -40,6 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<dynamic> _handleMethod(MethodCall methodCall) async {
     switch(methodCall.method) {
       case "sendMessage":
+        print(methodCall.arguments);
         _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(methodCall.arguments)));
     }
   }
